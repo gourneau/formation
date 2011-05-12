@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+		<script type="text/javascript" src="formation.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				$("#demo").formation();
+				$.formation.addInput({type:"text",labelValue:"First Name:",required:true, defaultValue:"Matt"});
+				$.formation.addInput({type:"text",labelValue:"Last Name:",required:true});
+				$.formation.addInput({type:"text",labelValue:"E-mail:",validation:'email',required:true});
+				$.formation.addInput({type:"text",labelValue:"Age:",validation:"number"});
+				$.formation.addButton({value: "SUBMIT"});
+			});
+		</script>
+
+
+	</head>
+
+<body>
+
+	<div id="demo">
+	</div>
+
+</body>
+	
+</html>
