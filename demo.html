@@ -9,18 +9,16 @@
 				
 				var obj = { "form":
 								[
-									{ "addInput": {type:"text",labelValue:"First Name:",required:true, defaultValue:"Matt"} },
-									{ "addButton": {value: "SUBMIT"} }	
+									[ "addInput" , {type:"text",labelValue:"First Name:",required:true, defaultValue:"Matt"} ],
+									[ "addButton", {value: "SUBMIT"} ]	
 								]
 						  };
 			  
 				$("#formed").formation();
 			
 			    jQuery.each(obj.form, function(i, element) {
-			        jQuery.each(element, function(key, value) {
-					
-					  eval('$.formation.' + key + '('+ value[0] +')');
-				    }); 
+						console.log(element[1]);
+					    eval('$.formation.' + element[0] + '('+ JSON.stringify(element[1]) +');'); 
 			   });
 			
 			
